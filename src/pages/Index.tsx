@@ -15,7 +15,7 @@ const Index = () => {
           className="h-full w-full object-cover"
         >
           <source
-            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4"
+            src="https://cdn.pixabay.com/video/2024/10/26/238264_medium.mp4?download"
             type="video/mp4"
           />
         </video>
