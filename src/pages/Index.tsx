@@ -11,37 +11,34 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="relative min-h-svh w-full overflow-hidden bg-background font-['General_Sans'] text-foreground">
-      {/* Background Video */}
-      <div className="fixed inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="h-full w-full object-cover"
-        >
-          <source
-            src="https://cdn.pixabay.com/video/2024/10/26/238264_medium.mp4?download"
-            type="video/mp4"
-          />
-        </video>
-        <div className="absolute inset-0 bg-background/50" />
+      {/* Hero with Video Background */}
+      <div className="relative">
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-cover"
+          >
+            <source
+              src="https://cdn.pixabay.com/video/2024/10/26/238264_medium.mp4?download"
+              type="video/mp4"
+            />
+          </video>
+          <div className="absolute inset-0 bg-background/50" />
+        </div>
+        <HeroSection />
       </div>
 
-      {/* Sticky Navbar */}
-      <div className="sticky top-0 z-50 backdrop-blur-md bg-background/30">
-        <Navbar />
+      {/* Sections on solid black */}
+      <div className="relative z-10 bg-background">
+        <FeaturesSection />
+        <HowItWorksSection />
+        <PricingSection />
+        <ResourcesSection />
+        <Footer />
       </div>
-
-      {/* Hero */}
-      <HeroSection />
-
-      {/* Sections */}
-      <FeaturesSection />
-      <HowItWorksSection />
-      <PricingSection />
-      <ResourcesSection />
-      <Footer />
     </div>
   );
 };
