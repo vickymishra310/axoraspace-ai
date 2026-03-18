@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 interface PillButtonProps {
   variant: "light" | "dark";
   label: string;
+  onClick?: () => void;
 }
 
-const PillButton = ({ variant, label }: PillButtonProps) => {
+const PillButton = ({ variant, label, onClick }: PillButtonProps) => {
   const isLight = variant === "light";
 
   return (
@@ -13,6 +14,7 @@ const PillButton = ({ variant, label }: PillButtonProps) => {
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className="relative group"
+      onClick={onClick}
     >
       <div
         className="rounded-full overflow-hidden"
