@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="absolute inset-0 bg-background/70" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
       </div>
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-[1200px] relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">

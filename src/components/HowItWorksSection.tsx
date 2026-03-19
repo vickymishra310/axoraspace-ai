@@ -30,7 +30,7 @@ const HowItWorksSection = () => {
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-[1200px] relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
