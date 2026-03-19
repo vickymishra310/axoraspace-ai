@@ -39,7 +39,7 @@ const HowItWorksSection = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Three Steps to Smarter
+            Three Steps to <span className="font-['Playfair_Display'] italic">Smarter</span>
           </h2>
           <p className="text-[15px] text-foreground/60 max-w-[480px] mx-auto">
             Get from zero to production-ready AI in under an hour.

@@ -48,7 +48,7 @@ const PricingSection = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Simple, Transparent Pricing
+            Simple, <span className="font-['Playfair_Display'] italic">Transparent</span> Pricing
           </h2>
           <p className="text-[15px] text-foreground/60 max-w-[480px] mx-auto">
             Start free. Scale when you're ready.

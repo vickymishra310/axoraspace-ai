@@ -66,7 +66,7 @@ const FeaturesSection = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Built for the AI Era
+            Built for the <span className="font-['Playfair_Display'] italic">AI Era</span>
           </h2>
           <p className="text-[15px] text-foreground/60 max-w-[520px] mx-auto">
             Every feature is designed to amplify human potential through intelligent automation.

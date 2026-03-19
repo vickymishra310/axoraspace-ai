@@ -45,7 +45,7 @@ const ResourcesSection = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Everything You Need
+            <span className="font-['Playfair_Display'] italic">Everything</span> You Need
           </h2>
           <p className="text-[15px] text-foreground/60 max-w-[480px] mx-auto">
             Tools, knowledge, and community to help you succeed.
