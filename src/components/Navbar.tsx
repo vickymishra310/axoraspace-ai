@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import PillButton from "@/components/PillButton";
 import axoraLogo from "@/assets/axora-logo.svg";
 
