@@ -20,7 +20,15 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative z-10 border-t border-foreground/10 px-6 py-16 md:px-[120px]">
+    <footer className="relative z-10 border-t border-foreground/10 px-6 py-16 md:px-[120px] overflow-hidden">
+      {/* Background video with bottom fade */}
+      <div className="absolute inset-0 z-0">
+        <video autoPlay muted loop playsInline className="h-full w-full object-cover">
+          <source src="https://media.istockphoto.com/id/1675594856/video/data-lines-with-shallow-depth-of-field-and-copy-space-purple-version-technology-computer.mp4?p=1&s=mp4-640x640-is&k=20&c=K-__4cqLD1aANzkgoWix0o4p-uZKMUP1GlbATX2d718=" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
+      </div>
       <div className="mx-auto max-w-[1200px]">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           {/* Brand */}
