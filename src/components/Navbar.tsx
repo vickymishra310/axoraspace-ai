@@ -39,10 +39,9 @@ const Navbar = () => {
             <button
               key={item.label}
               onClick={() => scrollTo(item.href)}
-              className="flex items-center gap-[14px] text-[14px] font-medium text-foreground opacity-90 hover:opacity-100 transition-opacity"
+              className="text-[14px] font-medium text-foreground opacity-90 hover:opacity-100 transition-opacity"
             >
               {item.label}
-              <ChevronDown size={14} strokeWidth={2.5} />
             </button>
           ))}
         </div>
