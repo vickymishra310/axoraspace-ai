@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative z-50 flex items-center justify-between px-6 py-5 md:px-[120px]">
+    <nav className="relative z-50 flex items-center justify-between px-6 py-5 md:px-[120px] md:justify-center md:gap-12">
       <div className="flex items-center gap-[30px]">
         <a
           href="#hero"
