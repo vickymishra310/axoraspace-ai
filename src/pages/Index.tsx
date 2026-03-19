@@ -28,6 +28,7 @@ const Index = () => {
           </video>
           <div className="absolute inset-0 bg-background/50" />
         </div>
+        <Navbar />
         <HeroSection />
       </div>
 

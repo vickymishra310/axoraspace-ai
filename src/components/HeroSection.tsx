@@ -33,7 +33,8 @@ const HeroSection = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Intelligence That Builds the Future
+          Intelligence That{" "}
+          <span className="font-['Playfair_Display'] italic">Builds</span> the Future
         </h1>
 
         {/* Subtitle */}
