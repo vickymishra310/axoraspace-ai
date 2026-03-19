@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import PillButton from "@/components/PillButton";
 import axoraLogo from "@/assets/axora-logo.svg";
 
@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative z-50 flex items-center justify-between px-6 py-5 md:px-[120px]">
+    <nav className="relative z-50 flex items-center justify-between px-6 py-5 md:px-[120px] md:justify-center md:gap-12">
       <div className="flex items-center gap-[30px]">
         <a
           href="#hero"
@@ -39,10 +39,9 @@ const Navbar = () => {
             <button
               key={item.label}
               onClick={() => scrollTo(item.href)}
-              className="flex items-center gap-[14px] text-[14px] font-medium text-foreground opacity-90 hover:opacity-100 transition-opacity"
+              className="text-[14px] font-medium text-foreground opacity-90 hover:opacity-100 transition-opacity"
             >
               {item.label}
-              <ChevronDown size={14} strokeWidth={2.5} />
             </button>
           ))}
         </div>

@@ -46,8 +46,27 @@ const item = {
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="relative z-10 px-6 py-[120px] md:px-[120px]">
-      <div className="mx-auto max-w-[1200px]">
+    <section id="features" className="relative z-10 overflow-hidden px-6 py-[120px] md:px-[120px]">
+      {/* Background video with fades */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source
+            src="https://cdn.pixabay.com/video/2022/06/21/121602-724710304.mp4?download"
+            type="video/mp4"
+          />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent" style={{ height: '30%' }} />
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background via-transparent to-transparent" style={{ height: '30%' }} />
+        <div className="absolute inset-0 bg-background/40" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-[1200px]">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
