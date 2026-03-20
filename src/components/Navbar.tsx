@@ -21,33 +21,34 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative z-50 flex items-center justify-between px-6 py-5 md:px-[120px] md:justify-center md:gap-12">
-      <div className="flex items-center gap-[30px]">
-        <a
-          href="#hero"
-          onClick={(e) => { e.preventDefault(); scrollTo("#hero"); }}
-          className="flex items-center gap-2.5"
-        >
-          <img src={axoraLogo} alt="Axoraspace logo" className="h-[28px] w-auto" />
-          <span className="text-[18px] font-bold tracking-tight text-foreground">
-            axoraspace
-          </span>
-        </a>
+    <nav className="relative z-50 flex items-center justify-between px-4 py-4 sm:px-6 sm:py-5 md:px-[120px]">
+      {/* Logo — left */}
+      <a
+        href="#hero"
+        onClick={(e) => { e.preventDefault(); scrollTo("#hero"); }}
+        className="flex items-center gap-2.5 shrink-0"
+      >
+        <img src={axoraLogo} alt="Axoraspace logo" className="h-[24px] sm:h-[28px] w-auto" />
+        <span className="text-[16px] sm:text-[18px] font-bold tracking-tight text-foreground">
+          axoraspace
+        </span>
+      </a>
 
-        <div className="hidden md:flex items-center gap-[30px]">
-          {navItems.map((item) => (
-            <button
-              key={item.label}
-              onClick={() => scrollTo(item.href)}
-              className="text-[14px] font-medium text-foreground opacity-90 hover:opacity-100 transition-opacity"
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+      {/* Nav links — center */}
+      <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        {navItems.map((item) => (
+          <button
+            key={item.label}
+            onClick={() => scrollTo(item.href)}
+            className="text-[14px] font-medium text-foreground opacity-90 hover:opacity-100 transition-opacity"
+          >
+            {item.label}
+          </button>
+        ))}
       </div>
 
-      <div className="hidden md:block">
+      {/* CTA — right */}
+      <div className="hidden md:block shrink-0">
         <PillButton variant="dark" label="Get Started" onClick={() => scrollTo("#pricing")} />
       </div>
 

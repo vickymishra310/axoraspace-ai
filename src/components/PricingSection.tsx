@@ -29,13 +29,23 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="relative z-10 px-6 py-[120px] md:px-[120px]">
-      <div className="mx-auto max-w-[1200px]">
+    <section id="pricing" className="relative z-10 px-4 py-20 sm:px-6 md:px-[120px] md:py-[120px] overflow-hidden">
+      {/* Background video with fades */}
+      <div className="absolute inset-0 z-0">
+        <video autoPlay muted loop playsInline className="h-full w-full object-cover">
+          <source src="https://cdn.pixabay.com/video/2022/06/19/120765-724673340_medium.mp4?download" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-background/50" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      </div>
+
+      <div className="mx-auto max-w-[1200px] relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-4 py-1.5 backdrop-blur-md mb-6">
             <span className="text-[13px] font-medium text-foreground/60">Pricing</span>
@@ -63,7 +73,7 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, type: "spring", bounce: 0 }}
-              className={`relative rounded-2xl border p-8 backdrop-blur-xl transition-all duration-300 ${
+              className={`relative rounded-2xl border p-6 sm:p-8 backdrop-blur-xl transition-all duration-300 ${
                 plan.highlighted
                   ? "border-foreground/30 bg-foreground/[0.08]"
                   : "border-foreground/10 bg-foreground/[0.03] hover:border-foreground/20"
@@ -83,7 +93,7 @@ const PricingSection = () => {
               </div>
 
               <div className="mb-8">
-                <span className="text-[40px] font-bold text-foreground">{plan.price}</span>
+                <span className="text-[36px] sm:text-[40px] font-bold text-foreground">{plan.price}</span>
                 {plan.period && <span className="text-[15px] text-foreground/50">{plan.period}</span>}
               </div>
 

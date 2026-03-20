@@ -46,33 +46,23 @@ const item = {
 
 const FeaturesSection = () => {
   return (
-    <section id="features" className="relative z-10 overflow-hidden px-6 py-[120px] md:px-[120px]">
+    <section id="features" className="relative z-10 overflow-hidden px-4 py-20 sm:px-6 md:px-[120px] md:py-[120px]">
       {/* Background video with fades */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="h-full w-full object-cover"
-        >
-          <source
-            src="https://cdn.pixabay.com/video/2022/06/21/121602-724710304.mp4?download"
-            type="video/mp4"
-          />
+        <video autoPlay muted loop playsInline className="h-full w-full object-cover">
+          <source src="https://cdn.pixabay.com/video/2022/06/21/121602-724710304.mp4?download" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent" style={{ height: '30%' }} />
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background via-transparent to-transparent" style={{ height: '30%' }} />
         <div className="absolute inset-0 bg-background/40" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1200px]">
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-4 py-1.5 backdrop-blur-md mb-6">
             <span className="text-[13px] font-medium text-foreground/60">Core Capabilities</span>
@@ -92,19 +82,18 @@ const FeaturesSection = () => {
           </p>
         </motion.div>
 
-        {/* Feature grid */}
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
         >
           {features.map((feature) => (
             <motion.div
               key={feature.title}
               variants={item}
-              className="group relative rounded-2xl border border-foreground/10 bg-foreground/[0.03] backdrop-blur-xl p-8 hover:bg-foreground/[0.06] hover:border-foreground/20 transition-all duration-300"
+              className="group relative rounded-2xl border border-foreground/10 bg-foreground/[0.03] backdrop-blur-xl p-6 sm:p-8 hover:bg-foreground/[0.06] hover:border-foreground/20 transition-all duration-300"
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-foreground/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10">
