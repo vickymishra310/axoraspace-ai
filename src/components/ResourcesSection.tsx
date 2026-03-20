@@ -26,13 +26,13 @@ const resources = [
 
 const ResourcesSection = () => {
   return (
-    <section id="resources" className="relative z-10 px-6 py-[120px] md:px-[120px]">
+    <section id="resources" className="relative z-10 px-4 py-20 sm:px-6 md:px-[120px] md:py-[120px]">
       <div className="mx-auto max-w-[1200px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-4 py-1.5 backdrop-blur-md mb-6">
             <span className="text-[13px] font-medium text-foreground/60">Resources</span>
@@ -52,7 +52,7 @@ const ResourcesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {resources.map((res, i) => (
             <motion.a
               href="#"
@@ -61,7 +61,7 @@ const ResourcesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, type: "spring", bounce: 0 }}
-              className="group relative flex gap-5 rounded-2xl border border-foreground/10 bg-foreground/[0.03] backdrop-blur-xl p-7 hover:bg-foreground/[0.06] hover:border-foreground/20 transition-all duration-300 cursor-pointer"
+              className="group relative flex gap-4 sm:gap-5 rounded-2xl border border-foreground/10 bg-foreground/[0.03] backdrop-blur-xl p-5 sm:p-7 hover:bg-foreground/[0.06] hover:border-foreground/20 transition-all duration-300 cursor-pointer"
             >
               <div className="shrink-0 mt-1 inline-flex items-center justify-center w-10 h-10 rounded-xl border border-foreground/10 bg-foreground/5">
                 <res.icon size={18} className="text-foreground/80" />

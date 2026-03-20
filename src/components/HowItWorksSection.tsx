@@ -20,22 +20,13 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="relative z-10 px-6 py-[120px] md:px-[120px] overflow-hidden">
-      {/* Background video with top/bottom fade */}
-      <div className="absolute inset-0 z-0">
-        <video autoPlay muted loop playsInline className="h-full w-full object-cover">
-          <source src="https://media.istockphoto.com/id/2216855910/video/looping-3d-animation-abstract-pink-blue-neon-background-with-unfocussed-glowing-wavy-lines.mp4?p=1&s=mp4-640x640-is&k=20&c=aQFcpeevzDhlzoVoeEBKkBdrJ7Uo15NVmgPu6rpB1pk=" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-background/60" />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
-      </div>
-      <div className="mx-auto max-w-[1200px] relative z-10">
+    <section id="how-it-works" className="relative z-10 px-4 py-20 sm:px-6 md:px-[120px] md:py-[120px]">
+      <div className="mx-auto max-w-[1200px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-20"
+          className="text-center mb-14 md:mb-20"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-4 py-1.5 backdrop-blur-md mb-6">
             <span className="text-[13px] font-medium text-foreground/60">Simple Process</span>
@@ -69,9 +60,9 @@ const HowItWorksSection = () => {
               className="relative flex flex-col items-center text-center"
             >
               <div className="mb-8 relative">
-                <div className="w-[120px] h-[120px] rounded-full border border-foreground/10 bg-foreground/[0.03] backdrop-blur-xl flex items-center justify-center">
+                <div className="w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full border border-foreground/10 bg-foreground/[0.03] backdrop-blur-xl flex items-center justify-center">
                   <span
-                    className="text-[36px] font-bold"
+                    className="text-[28px] md:text-[36px] font-bold"
                     style={{
                       background: "linear-gradient(144.5deg, #FFFFFF 28%, rgba(0,0,0,0) 115%)",
                       WebkitBackgroundClip: "text",
@@ -83,7 +74,7 @@ const HowItWorksSection = () => {
                 </div>
                 <div className="absolute inset-0 rounded-full bg-foreground/5 blur-2xl" />
               </div>
-              <h3 className="text-[18px] font-semibold text-foreground mb-3">{step.title}</h3>
+              <h3 className="text-[17px] md:text-[18px] font-semibold text-foreground mb-3">{step.title}</h3>
               <p className="text-[14px] leading-relaxed text-foreground/50 max-w-[300px]">{step.description}</p>
             </motion.div>
           ))}

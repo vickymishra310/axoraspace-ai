@@ -20,17 +20,17 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative z-10 border-t border-foreground/10 px-6 py-16 md:px-[120px] overflow-hidden">
-      {/* Background video with bottom fade */}
+    <footer className="relative z-10 border-t border-foreground/10 px-4 py-12 sm:px-6 md:px-[120px] md:py-16 overflow-hidden">
+      {/* Background video with fade */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="h-full w-full object-cover">
-          <source src="https://media.istockphoto.com/id/1675594856/video/data-lines-with-shallow-depth-of-field-and-copy-space-purple-version-technology-computer.mp4?p=1&s=mp4-640x640-is&k=20&c=K-__4cqLD1aANzkgoWix0o4p-uZKMUP1GlbATX2d718=" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2022/06/22/121800-724719797_medium.mp4?download" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-background/70" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
       </div>
       <div className="mx-auto max-w-[1200px] relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
@@ -62,7 +62,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-12 md:mt-16 pt-8 border-t border-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[12px] text-foreground/30">© 2026 Axoraspace. All rights reserved.</p>
           <div className="flex gap-6">
             {["Twitter", "Discord", "GitHub"].map((social) => (
